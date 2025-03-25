@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptAI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PromptAI</h1>
+        <div class="prompt-container">
+            <div class="input-section">
+                <h2>Original Prompt</h2>
+                <textarea id="original-prompt" placeholder="Enter your prompt here..."></textarea>
+            </div>
+            <button id="enhance-btn">Enhance Prompt</button>
+            <div class="output-section">
+                <h2>Enhanced Prompt</h2>
+                <div id="enhanced-prompt" class="output-box"></div>
+            </div>
+        </div>
+        <div id="loading" class="loading hidden">Enhancing prompt...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
