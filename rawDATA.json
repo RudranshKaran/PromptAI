@@ -1,0 +1,783 @@
+{
+    "instructions": [
+      "WHAT MAKES A GOOD PROMPT",
+      "There can be a wide variety of prompts that you will get to know. The different types of prompts",
+      "that one can use:",
+      "Natural Language Prompts:",
+      "• These prompts emulate human-like instructions, gurgling the form of natural language",
+      "cues.",
+      "• They allow developers to interact with the model more intuitively, using instructions",
+      "that resemble how a person would communicate.",
+      "System Prompts:",
+      "• System prompts are predefined instructions or templates that developers provide to",
+      "guide the model's output.",
+      "• They offer a structured way of specifying the desired output format or behaviour,",
+      "providing explicit instructions to the model.",
+      "Conditional Prompts:",
+      "• Conditional prompts involve conditioning the model on specific contexts or constraints.",
+      "• By incorporating conditional prompts, developers can guide the model's behavior",
+      "based on conditional statements, such as \"if X, then Y\" or \"Given A, generate B.\"",
+      "How does Prompt Engineering Work?",
+      "• Start with a clear understanding of the task.",
+      "• Use clear and concise language.",
+      "• Be specific.",
+      "• Use examples.",
+      "• Experiment.",
+      "Benefits of Prompt Engineering",
+      "• Question answering.",
+      "• Creative writing.",
+      "• Machine translation.",
+      "• Coding.",
+      "Specifications to Definitely Include in an Effective Prompt",
+      "To create the \"best\" prompt, experts consistently emphasize the following must-have elements:",
+      "1. Clear Goal: State exactly what you want the AI to achieve (e.g., explain, generate,",
+      "analyze). Ambiguity leads to vague outputs.",
+      "2.",
+      "Specific Role or Persona: Assign the AI a role (e.g., “act as a physicist”) to anchor its",
+      "tone, expertise, and perspective.",
+      "3.",
+      "Detailed Context: Provide background information relevant to the task so the AI doesn’t",
+      "guess or misinterpret your intent.",
+      "4.",
+      "Output Format: Define how the response should be structured (e.g., list, essay, table)",
+      "to match your needs.",
+      "5.",
+      "Constraints or Guardrails: Specify what to avoid (e.g., “no technical jargon”) or limits",
+      "(e.g., “under 200 words”) to refine the output.",
+      "6.",
+      "Tone and Style: Indicate the desired voice (e.g., formal, casual, persuasive) to align",
+      "with your audience or purpose.",
+      "These elements ensure the AI has a roadmap to follow, reducing misinterpretation and",
+      "maximizing relevance.",
+      "Detailed Outline for Writing an Effective Prompt",
+      "Here’s a step-by-step outline, grounded in expert-recommended techniques (e.g., OpenAI’s",
+      "prompt engineering guides, the CLEAR framework by Dr. Leo Lo, and practical frameworks like",
+      "RTF or CRAFT), to craft a prompt that an AI like ChatGPT will understand and use to output",
+      "exactly what you want:",
+      "1. Define the Goal",
+      "● What to Do: Explicitly state the objective of the prompt. This is the “why” behind your",
+      "request.",
+      "●",
+      "Why It Matters: Without a clear goal, the AI may provide generic or off-target",
+      "responses.",
+      "●",
+      "How to Implement: Use action verbs (e.g., “explain,” “generate,” “compare”) and a",
+      "concise purpose.",
+      "●",
+      "Example: “Generate a marketing plan” or “Explain quantum physics concepts.”",
+      "●",
+      "Tip: Ask yourself, “What’s the one thing I need from this response?”",
+      "2. Assign a Role or Persona",
+      "● What to Do: Tell the AI who it should “be” while responding (e.g., “You are a seasoned",
+      "chef” or “Act as a data analyst”).",
+      "●",
+      "Why It Matters: This taps into the model’s training to mimic specific expertise or",
+      "perspectives, improving accuracy and tone.",
+      "●",
+      "How to Implement: Start with a declarative statement assigning the role before the",
+      "task.",
+      "●",
+      "Example: “You are an experienced SEO strategist.”",
+      "●",
+      "Tip: Choose a role that matches the domain knowledge required for your goal.",
+      "3. Provide Context",
+      "● What to Do: Give relevant background details to frame the task (e.g., audience,",
+      "scenario, or prior information).",
+      "●",
+      "Why It Matters: Context prevents the AI from making assumptions or missing key",
+      "nuances.",
+      "●",
+      "How to Implement: Include 1–2 sentences of specifics—dates, locations, stakeholders,",
+      "or constraints.",
+      "●",
+      "Example: “The marketing plan is for a tech startup launching a new app in 2025,",
+      "targeting young professionals.”",
+      "●",
+      "Tip: Imagine explaining the task to a smart colleague who lacks your specific situation—",
+      "what would they need to know?",
+      "4. Specify the Task",
+      "● What to Do: Detail the exact action or deliverable you want, breaking it into clear steps if",
+      "complex.",
+      "●",
+      "Why It Matters: Precision here ensures the AI focuses on your request, not tangents.",
+      "●",
+      "How to Implement: Use direct instructions and, if needed, list subtasks (e.g., “Include",
+      "X, Y, Z”).",
+      "●",
+      "Example: “Write a 200-word blog post with three tips for app promotion, each with a",
+      "catchy headline and a brief rationale.”",
+      "●",
+      "Tip: Avoid vague terms like “talk about” — opt for “list,” “describe,” or “analyze” instead.",
+      "5. Set the Output Format",
+      "● What to Do: Define how the response should look (e.g., bullet points, paragraphs, code",
+      "block, table).",
+      "●",
+      "Why It Matters: This tailors the structure to your use case, making the output",
+      "immediately usable.",
+      "●",
+      "How to Implement: State the format explicitly, including length if relevant.",
+      "●",
+      "Example: “Provide the response as a numbered list with each tip in 50 words or less.”",
+      "●",
+      "Tip: Match the format to how you’ll use it (e.g., a table for data comparison, prose for a",
+      "narrative).",
+      "6. Add Constraints and Guardrails",
+      "● What to Do: Note what to avoid or include to refine the scope (e.g., “No sales jargon” or",
+      "“Use only 2025 data”).",
+      "●",
+      "Why It Matters: This prevents irrelevant or unwanted content, keeping the AI on track.",
+      "●",
+      "How to Implement: Use phrases like “do not,” “only include,” or “limit to.”",
+      "●",
+      "Example: “Do not mention competitors by name; focus on general strategies.”",
+      "●",
+      "Tip: Anticipate common AI pitfalls (e.g., hallucination, verbosity) and preempt them.",
+      "7. Specify Tone and Style",
+      "● What to Do: Indicate the desired voice or complexity (e.g., “friendly and casual” or",
+      "“technical and concise”).",
+      "●",
+      "Why It Matters: This ensures the response fits your audience or purpose, enhancing its",
+      "effectiveness.",
+      "●",
+      "How to Implement: Add a short descriptor after the task.",
+      "●",
+      "Example: “Explain it in a supportive tone, as if speaking to a beginner.”",
+      "●",
+      "Tip: Test with adjectives like “professional,” “witty,” or “simple” to see what works best.",
+      "8. Include Examples (Optional but Powerful)",
+      "● What to Do: Provide a sample input/output pair to show the AI what success looks like.",
+      "●",
+      "Why It Matters: Examples clarify expectations, especially for creative or nuanced tasks,",
+      "leveraging few-shot learning.",
+      "●",
+      "How to Implement: Add “For example: [input] → [desired output].”",
+      "●",
+      "Example: “For example: ‘Tip 1: Host a giveaway’ → ‘Tip 1: Host a Giveaway - Boost",
+      "engagement with a fun contest.’”",
+      "●",
+      "Tip: Use this for complex tasks or when prior outputs missed the mark.",
+      "9. Encourage Reasoning (Optional for Precision)",
+      "● What to Do: Ask the AI to explain its logic or steps (e.g., “Show your reasoning”).",
+      "●",
+      "Why It Matters: This reduces errors and lets you verify the response’s validity.",
+      "●",
+      "How to Implement: Add a phrase like “step-by-step” or “justify your answer.”",
+      "●",
+      "Example: “List three strategies and explain why each works for this audience.”",
+      "●",
+      "Tip: Useful for technical or analytical tasks where process matters.",
+      "10. Test and Refine",
+      "● What to Do: Review the AI’s output and tweak the prompt if it’s off-target (e.g., add",
+      "detail, adjust tone).",
+      "●",
+      "Why It Matters: LLMs aren’t perfect; iterative refinement hones the result.",
+      "●",
+      "How to Implement: Run the prompt, then modify based on gaps (e.g., “Make it shorter”",
+      "or “Add more detail”).",
+      "●",
+      "Example: If the blog post is too long, add “Keep each tip under 50 words.”",
+      "●",
+      "Tip: Treat prompting like a conversation—adjust based on what you get back.",
+      "To ensure PromptAI generates prompts that are both specific and comprehensive, you",
+      "can implement the following strategies:",
+      "Implement a Multi-Step Prompt Generation Process",
+      "1. Input Analysis:",
+      "● Parse user input for key details, intent, and context12.",
+      "● Use NLP techniques to extract essential information from minimal user",
+      "input.",
+      "2. Prompt Structuring:",
+      "● Utilize templates or modular designs for common prompt structures2.",
+      "● Include sections for task description, context, constraints, and desired",
+      "output format.",
+      "3. Detail Expansion:",
+      "● Employ a question-asking mechanism to elicit more information from the",
+      "user2.",
+      "● Use this additional information to flesh out the prompt with relevant",
+      "details.",
+      "Incorporate Best Practices for Prompt Engineering",
+      "1. Specificity:",
+      "● Clearly define the task, target audience, tone, and key points13.",
+      "● Avoid vague or open-ended requests.",
+      "2. Context Provision:",
+      "● Include background information relevant to the task23.",
+      "● Specify any particular requirements or constraints.",
+      "3. Audience Consideration:",
+      "● Integrate the intended audience into the prompt2.",
+      "● Tailor the language and complexity to the target demographic.",
+      "4. Format Specification:",
+      "● Clearly outline the desired output format3.",
+      "● Include examples or templates when necessary.",
+      "Implement Refinement Mechanisms",
+      "1. Iterative Improvement:",
+      "● Allow users to provide feedback on generated prompts2.",
+      "● Use this feedback to refine and improve the prompt.",
+      "2. AI-Assisted Refinement:",
+      "● Utilize the AI itself to suggest improvements or ask clarifying questions2.",
+      "● Implement a self-refinement process where the AI critiques and enhances",
+      "its own prompts.",
+      "3. Avoid Common Mistakes:",
+      "● Guard against over-complication by breaking down complex tasks into",
+      "smaller, manageable prompts2.",
+      "● Prevent under-specification by ensuring all necessary details are included.",
+      "By implementing these strategies, PromptAI can generate prompts that are both",
+      "specific to the user's needs and comprehensive in their coverage of the required",
+      "information, resulting in more effective and tailored outputs from AI models.",
+      "Based on the latest best practices for structuring AI prompts, here are the key strategies to",
+      "ensure effective communication with AI models:",
+      "Clarity and Specificity",
+      "1. Provide clear and detailed instructions23.",
+      "2. Be as specific as possible to minimize ambiguity5.",
+      "3. Use natural language that mimics everyday speech3.",
+      "4. Keep prompts concise and straightforward while including necessary details36.",
+      "Context and Format",
+      "1. Add contextual information to help the AI understand the framework12.",
+      "2. Specify the desired output format or presentation style4.",
+      "3. Assign a role to the AI to tailor its response (e.g., \"Act as if you are...\")4.",
+      "4. Include relevant background information or constraints1.",
+      "Structure and Components",
+      "1. Use a structured template that includes objective, persona, and instructions2.",
+      "2. Break down complex tasks into smaller, manageable prompts26.",
+      "3. Utilize \"do\" and \"don't\" statements to clarify expectations4.",
+      "4. Specify the tone and target audience for the response4.",
+      "Examples and Iteration",
+      "1. Provide few-shot examples to guide the AI's response25.",
+      "2. Use prompt chaining to build on previous responses and explore related concepts6.",
+      "3. Implement sequential prompting for complex tasks or to refine information1.",
+      "4. Iterate and experiment with different phrasings to improve results37.",
+      "Advanced Techniques",
+      "1. Leverage the AI's implicit knowledge base for more insightful responses1.",
+      "2. Use system instructions to set overall behavior or constraints2.",
+      "3. Instruct the model to explain its reasoning for more transparent outputs2.",
+      "4. Experiment with parameter values to fine-tune responses2.",
+      "By implementing these best practices, you can create well-structured prompts that lead to more",
+      "accurate, relevant, and useful AI-generated responses.",
+      "Citations:",
+      "1. https://www.codecademy.com/article/ai-prompting-best-practices",
+      "2. https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strate",
+      "gies",
+      "3. https://www.atlassian.com/blog/artificial-intelligence/ultimate-guide-writing-ai-prompts",
+      "4. https://www.huit.harvard.edu/news/ai-prompts",
+      "5. https://www.digitalocean.com/resources/articles/prompt-engineering-best-practices",
+      "6. https://www.atlassian.com/blog/announcements/best-practices-for-generating-ai-prompts",
+      "7. https://mitsloanedtech.mit.edu/ai/basics/effective-prompts/",
+      "8. https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-t",
+      "he-openai-api",
+      "To ensure your AI prompts are specific enough to avoid generic responses, follow these key",
+      "strategies:",
+      "1. Be clear and detailed in your instructions. Instead of broad requests, provide precise",
+      "information about what you need12. For example, replace \"Tell me about oceans\" with",
+      "\"Provide an overview of the major oceans of the world and their unique characteristics.\"",
+      "2. Include relevant context and background information. This helps the AI understand the",
+      "framework within which to generate its response12. For instance, when asking for",
+      "recommendations, mention your preferences and constraints.",
+      "3. Use descriptive language and specific examples to create a clear picture of what you",
+      "want2. This helps the AI understand the exact tone, style, and content you desire.",
+      "4. Specify the desired output format, presentation style, or structure for the AI's",
+      "response34. This guides the AI to provide information in the most useful way for your",
+      "needs.",
+      "5. Break down complex tasks into smaller, more manageable prompts3. This allows you to",
+      "focus on specific aspects and get more detailed responses.",
+      "6. Add constraints to your prompts, such as word counts or tone requirements3. This helps",
+      "focus the AI's output and avoid responses that are too long, short, or vague.",
+      "7. Use active language and specific action verbs to clarify your intent4. For example, use",
+      "verbs like \"analyze,\" \"compare,\" or \"evaluate\" for tasks involving data interpretation.",
+      "8. Provide examples or templates of the type of response you're looking for, especially for",
+      "complex or nuanced tasks34.",
+      "9. Avoid using pronouns without clear antecedents, and address potential areas of",
+      "misunderstanding directly in your prompt2.",
+      "10. Iterate and refine your prompts if you don't get the desired result initially5. You can ask",
+      "for improvements or rephrase your request to get more accurate and relevant",
+      "responses.",
+      "By implementing these strategies, you can craft prompts that are specific, clear, and effective in",
+      "eliciting the desired responses from AI models.",
+      "Citations:",
+      "1. https://www.codecademy.com/article/ai-prompting-best-practices",
+      "2. https://www.ai-wordsmith.com/blog/understanding-ai-prompts",
+      "3. https://www.nearpartner.com/prompt-engineering-13-tips-to-get-better-responses/",
+      "4. https://www.godofprompt.ai/blog/common-ai-prompt-mistakes-and-how-to-fix-them",
+      "5. https://www.reddit.com/r/LocalLLaMA/comments/183noze/how_can_i_eliminate_generic",
+      "_ai_responses/",
+      "6. https://community.openai.com/t/avoid-certain-responses-and-prompts-and-generate-resp",
+      "onses-as-per-my-input/642140",
+      "7. https://legal.thomsonreuters.com/blog/writing-effective-legal-ai-prompts/",
+      "8. https://community.openai.com/t/how-to-prevent-chatgpt-from-answering-questions-that-a",
+      "re-outside-the-scope-of-the-provided-context-in-the-system-role-message/112027",
+      "Here are some examples of effective AI prompts:",
+      "1. Task-specific prompts:",
+      "○ \"Write an email to [contact] to schedule a meeting on [day]. Use less than 200",
+      "words.\"1",
+      "○ \"Summarize these articles: [insert URLs]. Contextualize why these",
+      "announcements are important to [industry].\"1",
+      "2. Role-based prompts:",
+      "○ \"Act as if you are my personal trainer. Create a recipe that will help me refuel",
+      "after my workout. Do include tomatoes, chicken, and some type of carb. Don't",
+      "include chili peppers or any ingredients containing wheat.\"2",
+      "3. Output format specification:",
+      "○ \"Create a [format of output] about / that contains...\"2",
+      "○ \"Present this in the form of...\"2",
+      "4. Tone and audience consideration:",
+      "○ \"Give me ideas for a best man's speech that is funny and heartwarming but",
+      "appropriate for a family audience\"2",
+      "5. Creative writing prompts:",
+      "○ \"Write a short story about two students trapped in a haunted house in Montana.\"3",
+      "○ \"You're a time traveler from the year 4055. Write a letter to your past self",
+      "describing the future.\"3",
+      "6. Educational prompts:",
+      "○ \"Design a lesson plan that helps students practice multiplication tables. Make it",
+      "fun and engaging.\"3",
+      "○ \"Write a script for an educational video that explores the Solar System and its",
+      "role in the Milky Way.\"3",
+      "7. Marketing and design prompts:",
+      "○ \"Design an eye-catching logo for a sunglasses company that mixes fashion and",
+      "fun.\"3",
+      "○ \"Generate a visually appealing poster promoting a conference for chefs and",
+      "culinary artists.\"3",
+      "8. AI art prompts:",
+      "○ \"Create an abstract painting inspired by the rush hour traffic in New York City.\"3",
+      "○ \"Generate a piece of artwork with cinematic lighting that shows an actor on a",
+      "Broadway stage.\"3",
+      "These examples demonstrate how to craft specific, detailed prompts that provide clear",
+      "instructions, context, and desired outcomes to AI models, resulting in more accurate and",
+      "relevant responses.",
+      "Citations:",
+      "1. https://www.atlassian.com/blog/artificial-intelligence/ultimate-guide-writing-ai-prompts",
+      "2. https://www.huit.harvard.edu/news/ai-prompts",
+      "3. https://formidableforms.com/ai-prompt-examples/",
+      "4. https://oneit.charlotte.edu/2024/09/19/ai-helpful-tips-creating-effective-prompts/",
+      "5. https://mitsloanedtech.mit.edu/ai/basics/effective-prompts/",
+      "6. https://www.wordstream.com/blog/ai-prompts",
+      "7. https://www.reddit.com/r/aiArt/comments/130n3os/a_simple_guide_for_ai_prompts_for_",
+      "people_who_are/",
+      "8. https://www.vendasta.com/blog/ai-prompt-examples/",
+      "To generate prompts that elicit exactly what you want from an AI model, consider these",
+      "advanced techniques and strategies:",
+      "Structured Prompting",
+      "1. Use a clear template:",
+      "○ Instruction: Specify the task or action",
+      "○ Context: Provide relevant background",
+      "○ Input: Include specific data or text to work with",
+      "○ Output: Define the desired format or type of response",
+      "2. Implement prompt chaining:",
+      "○ Break complex tasks into a series of interconnected prompts",
+      "○ Use the output of one prompt as input for the next",
+      "Advanced Techniques",
+      "1. Chain-of-Thought (CoT) Prompting:",
+      "○ Guide the AI through a sequence of reasoning steps",
+      "○ Improves performance on complex tasks like math problems and logical",
+      "reasoning1",
+      "2. Tree-of-Thoughts (ToT):",
+      "○ Instruct the AI to explore multiple problem-solving avenues",
+      "○ Useful for tasks requiring branching logic or decision-making4",
+      "3. Self-Consistency:",
+      "○ Generate multiple responses and select the most consistent one",
+      "○ Enhances reliability for tasks with potential variability2",
+      "4. Active Prompting:",
+      "○ Use uncertainty-based active learning to adapt LLMs to different tasks",
+      "○ Involves four stages: uncertainty estimation, selection, annotation, and",
+      "inference2",
+      "5. Generate Knowledge Prompting:",
+      "○ Instruct the AI to generate relevant facts or context before completing the main",
+      "task",
+      "○ Improves performance on knowledge-intensive tasks3",
+      "Optimization Strategies",
+      "1. Iterative Refinement:",
+      "○ Start with a basic prompt and iteratively improve it based on results",
+      "○ Use feedback loops to fine-tune the prompt's effectiveness",
+      "2. Prompt Calibration:",
+      "○ Adjust the level of detail or complexity in your prompt based on the model's",
+      "capabilities",
+      "○ Find the right balance between providing guidance and allowing the model",
+      "flexibility",
+      "3. Contextual Priming:",
+      "○ Begin with a brief, relevant scenario to set the tone and context",
+      "○ Helps align the AI's response with your specific needs",
+      "4. Explicit Constraints:",
+      "○ Clearly state any limitations or requirements",
+      "○ Use phrases like \"Do not include...\" or \"Ensure that...\"",
+      "5. Meta-Prompting:",
+      "○ Instruct the AI to generate its own optimal prompt for a given task",
+      "○ Can lead to unexpected and effective prompting strategies3",
+      "By incorporating these advanced techniques and strategies, you can create more sophisticated",
+      "prompts that guide AI models to produce highly specific and tailored responses, improving the",
+      "accuracy and relevance of the output for your needs.",
+      "Citations:",
+      "1. https://learnprompting.org/courses/advanced-prompt-engineering",
+      "2. https://www.mercity.ai/blog-post/advanced-prompt-engineering-techniques",
+      "3. https://www.promptingguide.ai",
+      "4. https://www.forbes.com/sites/lanceeliot/2024/05/09/the-best-prompt-engineering-techniq",
+      "ues-for-getting-the-most-out-of-generative-ai/",
+      "5. https://www.promptingguide.ai/techniques",
+      "6. https://docs.cohere.com/v2/docs/advanced-prompt-engineering-techniques",
+      "7. https://platform.openai.com/docs/guides/prompt-engineering"
+    ],
+    "training_data": [
+      {
+        "prompt": "Give me some AI blog ideas.",
+        "response": "You are a technology blogger specializing in AI. Generate five compelling blog post ideas about artificial intelligence advancements in 2025. Each idea should include a catchy headline and a short explanation (under 50 words) about its relevance. Focus on real-world applications, ethical concerns, and industry trends. Keep the tone professional yet engaging."
+      },
+      {
+        "prompt": "Write a poem about nature.",
+        "response": "Compose a 12-line free-verse poem celebrating nature’s beauty. Use vivid imagery, sensory details, and metaphors to capture the essence of a tranquil forest at dawn. Maintain a reflective and peaceful tone."
+      },
+      {
+        "prompt": "Explain quantum computing to me.",
+        "response": "You are a university professor teaching quantum computing. Explain the concept in simple terms for a beginner, using an analogy. Break down key ideas like superposition and entanglement in under 200 words. Use a friendly and accessible tone."
+      },
+      {
+        "prompt": "Need a coffee shop name.",
+        "response": "Generate 10 unique and creative coffee shop name ideas. Each name should be short, catchy, and reflect themes of warmth, energy, and quality coffee. Avoid generic names and ensure they evoke a cozy atmosphere."
+      },
+      {
+        "prompt": "Need a caption for a beach pic.",
+        "response": "Write a short and engaging Instagram caption for a scenic beach photo. Keep it under 15 words and include an optional emoji. The tone should be fun and relaxing."
+      },
+      {
+        "prompt": "How do I market my new product?",
+        "response": "You are a digital marketing consultant. Develop a three-step marketing strategy for a new fitness tracker launching in 2025. Include a short explanation of each step, focusing on digital ads, influencer partnerships, and customer engagement. Keep the tone professional and insightful."
+      },
+      {
+        "prompt": "Tips for a job interview?",
+        "response": "List five expert-backed job interview tips for first-time applicants. Keep each tip under 30 words, ensuring they are practical and easy to apply. Focus on confidence, preparation, and effective communication."
+      },
+      {
+        "prompt": "Give me a sci-fi story.",
+        "response": "Write a 300-word sci-fi short story set in a futuristic space colony where AI controls human decisions. Include a twist ending and maintain a suspenseful yet thought-provoking tone."
+      },
+      {
+        "prompt": "Describe a smartwatch.",
+        "response": "Write a compelling 100-word product description for a cutting-edge smartwatch with AI health tracking. Highlight its key features, including heart rate monitoring, sleep analysis, and voice control. Use an engaging and persuasive tone."
+      },
+      {
+        "prompt": "Give me a vegan pancake recipe.",
+        "response": "Provide a simple and delicious vegan pancake recipe. List ingredients and step-by-step instructions, ensuring the recipe is easy for beginners to follow. Keep it under 150 words."
+      },
+      {
+        "prompt": "A quote for entrepreneurs.",
+        "response": "Generate an original, inspirational quote for entrepreneurs, under 20 words, focusing on resilience and innovation."
+      },
+      {
+        "prompt": "Tell me fun space facts.",
+        "response": "Provide five fascinating space facts, each under 30 words, highlighting unique celestial phenomena and recent discoveries."
+      },
+      {
+        "prompt": "A video script on productivity.",
+        "response": "Write a 2-minute YouTube script for a productivity tips video. Include an engaging intro, three actionable tips, and a motivating conclusion."
+      },
+      {
+        "prompt": "Email subject for a sale.",
+        "response": "Generate five compelling email subject lines for a 50% off weekend sale. Keep them under 10 words and high-converting."
+      },
+      {
+        "prompt": "Funny birthday wish.",
+        "response": "Write a humorous birthday message for a friend, under 30 words, using a lighthearted joke."
+      },
+      {
+        "prompt": "LinkedIn post on AI trends.",
+        "response": "Craft a 200-word LinkedIn post discussing the top three AI trends for 2025. Use a professional but engaging tone."
+      },
+      {
+        "prompt": "Slogan for an eco brand.",
+        "response": "Create a catchy and memorable 5-word slogan for a sustainable fashion brand."
+      },
+      {
+        "prompt": "Write a scary story.",
+        "response": "Write a one-paragraph horror story with an eerie twist ending. Keep it under 100 words."
+      },
+      {
+        "prompt": "Is AI good for healthcare?",
+        "response": "Present three arguments in favor of AI in healthcare, each under 50 words, emphasizing efficiency, accuracy, and accessibility."
+      },
+      {
+        "prompt": "Sort an array in Python.",
+        "response": "Provide a Python function to sort an array in ascending order using the bubble sort algorithm. Include comments explaining each step."
+      },
+      {
+        "prompt": "How to learn Spanish fast?",
+        "response": "List five practical strategies for learning Spanish quickly, each under 40 words, focusing on immersion and consistency."
+      },
+      {
+        "prompt": "Creative wedding vows?",
+        "response": "Write heartfelt wedding vows in 100 words, incorporating love, commitment, and a personal touch."
+      },
+      {
+        "prompt": "Book recommendations for self-improvement?",
+        "response": "Suggest five self-improvement books with a one-sentence description of each."
+      },
+      {
+        "prompt": "Write a short mystery story.",
+        "response": "Write a 250-word mystery story with an unexpected twist."
+      },
+      {
+        "prompt": "Best productivity apps?",
+        "response": "List five top-rated productivity apps and explain their key features in under 30 words each."
+      },
+      {
+        "prompt": "SEO tips for beginners.",
+        "response": "Provide five essential SEO tips for beginners, each under 40 words."
+      },
+      {
+        "prompt": "Caption for a mountain photo.",
+        "response": "Generate a poetic 10-word Instagram caption for a scenic mountain photo."
+      },
+      {
+        "prompt": "Describe an enchanted forest.",
+        "response": "Write a 150-word vivid description of an enchanted forest, using rich imagery and sensory details."
+      },
+      {
+        "prompt": "Create a workout routine for beginners.",
+        "response": "Design a 3-day beginner-friendly workout plan with simple exercises and explanations."
+      },
+      {
+        "prompt": "Write a heartfelt apology message.",
+        "response": "Compose a sincere 50-word apology message that expresses regret and responsibility."
+      },
+      {
+        "prompt": "Write a story about a haunted house.",
+        "response": "You are a horror fiction writer. Write a short horror story (600-800 words) about a haunted house where a family moves in, only to discover its sinister past. Develop eerie atmosphere, suspense, and a shocking revelation at the end. Use a gothic tone and vivid descriptions to engage readers."
+      },
+      {
+        "prompt": "Explain black holes.",
+        "response": "You are an astrophysicist explaining black holes to a high school audience. Define what a black hole is, how it forms, and its effects on space-time. Use simple analogies, avoid jargon, and include an example of a well-known black hole. Keep the explanation within 300 words."
+      },
+      {
+        "prompt": "Generate startup ideas.",
+        "response": "You are a business consultant specializing in startups. Generate five innovative startup ideas in the tech industry, each with a brief (50-word) description. Focus on emerging trends like AI, sustainability, or blockchain. Ensure the ideas are feasible, unique, and have potential for market success."
+      },
+      {
+        "prompt": "Write a motivational speech.",
+        "response": "You are a keynote speaker at a leadership conference. Write a 3-minute motivational speech on overcoming failure and persistence. Use an inspiring tone, include a real-life success story, and end with a call to action. Keep the speech concise, impactful, and engaging."
+      },
+      {
+        "prompt": "Create a workout routine.",
+        "response": "You are a professional fitness trainer. Design a 4-week beginner-friendly home workout routine that requires no equipment. Include a variety of exercises focusing on strength, endurance, and flexibility. Present the routine as a structured weekly plan with a short explanation for each workout."
+      },
+      {
+        "prompt": "Give social media tips for small businesses.",
+        "response": "You are a digital marketing expert. Provide five actionable social media marketing tips for small businesses to increase engagement and customer reach. Each tip should be under 50 words and should focus on cost-effective strategies like content planning, audience targeting, and engagement."
+      },
+      {
+        "prompt": "Describe a futuristic city.",
+        "response": "You are a sci-fi world-builder. Describe a futuristic city in 2125, considering advanced technology, sustainability, and social structure. Focus on transportation, architecture, and daily life. Use vivid imagery and a balance of utopian and dystopian elements to make the setting feel realistic."
+      },
+      {
+        "prompt": "Make a meal plan for weight loss.",
+        "response": "You are a certified nutritionist. Create a 7-day meal plan for weight loss, emphasizing balanced nutrition, portion control, and variety. Each day should include b...(truncated 127525 characters)...reakfast, lunch, dinner, and snacks with calorie counts."
+      },
+      {
+        "prompt": "How can I improve my coding skills?",
+        "response": "Task: Provide a step-by-step guide to improve coding skills for intermediate learners.\nContext:\n● Cover practical techniques like code reviews, project-based learning, and debugging practice.\n● Discuss resources such as GitHub, Codecademy, and LeetCode.\n● Include a 30-day coding improvement plan.\nConstraints:\n● Word count: ~400 words.\n● Tone: Practical and encouraging.\nOutput Format:\n[Structured guide with daily tasks]"
+      },
+      {
+        "prompt": "What is the future of artificial intelligence?",
+        "response": "Task: Predict the future trajectory of artificial intelligence by 2030.\nContext:\n● Explore advancements in machine learning, natural language processing, and robotics.\n● Discuss potential societal impacts like job automation and ethical dilemmas.\n● Provide examples of current AI trends.\nConstraints:\n● Word count: ~400 words.\n● Tone: Analytical and forward-thinking.\nOutput Format:\n[Future trends analysis]"
+      },
+      {
+        "prompt": "What are the benefits of cloud computing?",
+        "response": "Task: Explain the primary benefits of cloud computing for businesses.\nContext:\n● Cover scalability, cost efficiency, and remote accessibility.\n● Discuss how companies like Amazon and Google leverage cloud tech.\n● Include a real-world application example.\nConstraints:\n● Word count: ~350 words.\n● Tone: Professional and educational.\nOutput Format:\n[Concise explanation with real-world applications]"
+      },
+      {
+        "prompt": "What is the difference between IaaS, PaaS, and SaaS?",
+        "response": "Task: Explain the key differences between Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), and Software-as-a-Service (SaaS).\nContext:\n● Provide definitions and examples for each model.\n● Discuss their advantages and use cases.\n● Include a comparative table.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technical but simplified.\nOutput Format:\n[Detailed breakdown with a comparison table]"
+      },
+      {
+        "prompt": "What are some common data visualization techniques?",
+        "response": "Task: Explain the most effective data visualization techniques.\nContext:\n● Cover methods like bar charts, heatmaps, scatter plots, and histograms.\n● Discuss when to use each technique for maximum impact.\n● Provide a real-world example of how data visualization aids decision-making.\nConstraints:\n● Word count: ~350 words.\n● Tone: Analytical and structured.\nOutput Format:\n[Overview with illustrative use cases]"
+      },
+      {
+        "prompt": "How can I optimize my Shopify store for conversions?",
+        "response": "Task: Provide actionable strategies to improve conversions for a Shopify store.\nContext:\n● Cover essential optimizations like UX design, speed improvements, and trust signals.\n● Discuss email marketing and abandoned cart recovery strategies.\n● Mention SEO and paid ad strategies for driving traffic.\nConstraints:\n● Word count: ~400 words.\n● Tone: Practical and business-oriented.\nOutput Format:\n[Step-by-step strategy guide]"
+      },
+      {
+        "prompt": "How do I write engaging blog posts?",
+        "response": "Task: Explain how to write compelling and engaging blog posts.\nContext:\n● Cover elements like storytelling, structure, and readability.\n● Include SEO best practices for better search rankings.\n● Provide a sample blog outline for reference.\nConstraints:\n● Word count: ~350 words.\n● Tone: Educational and engaging.\nOutput Format:\n[Guidelines with a sample blog structure]"
+      },
+      {
+        "prompt": "How can I start investing as a beginner?",
+        "response": "Task: Provide a beginner’s guide to investing.\nContext:\n● Cover investment options like stocks, ETFs, mutual funds, and real estate.\n● Explain risk management and diversification.\n● Include common mistakes to avoid.\nConstraints:\n● Word count: ~400 words.\n● Tone: Practical and educational.\nOutput Format:\n[Step-by-step investment guide]"
+      },
+      {
+        "prompt": "How can I improve my time management?",
+        "response": "Task: Provide effective time management strategies.\nContext:\n● Cover techniques like the Pomodoro Technique, Eisenhower Matrix, and time blocking.\n● Include tools and apps that help with productivity.\n● Provide a real-world example of improved efficiency.\nConstraints:\n● Word count: ~300 words.\n● Tone: Motivational and structured.\nOutput Format:\n[List of strategies with explanations]"
+      },
+      {
+        "prompt": "Best tips for solo travelers?",
+        "response": "Task: Provide essential safety and planning tips for solo travelers.\nContext:\n● Cover budgeting, itinerary planning, and safety precautions.\n● Mention useful apps and travel hacks.\n● Include advice on how to meet people while traveling solo.\nConstraints:\n● Word count: ~350 words.\n● Tone: Friendly and informative.\nOutput Format:\n[Step-by-step guide for solo travelers]"
+      },
+      {
+        "prompt": "How can I help my child develop good study habits?",
+        "response": "Task: Provide effective strategies for helping children develop strong study habits.\nContext:\n● Cover time management, active learning techniques, and a distraction-free environment.\n● Include methods for making studying fun and engaging.\n● Provide tips for parents to track progress.\nConstraints:\n● Word count: ~350 words.\n● Tone: Supportive and educational.\nOutput Format:\n[List of study strategies with explanations]"
+      },
+      {
+        "prompt": "What are some healthy meal prep ideas?",
+        "response": "Task: Provide easy and nutritious meal prep ideas.\nContext:\n● Include breakfast, lunch, dinner, and snack options.\n● Focus on balanced macronutrients (protein, carbs, healthy fats).\n● Provide storage and reheating tips.\nConstraints:\n● Word count: ~350 words.\n● Tone: Practical and motivating.\nOutput Format:\n[Meal prep plan with recipes]"
+      },
+      {
+        "prompt": "What is the concept of mindfulness?",
+        "response": "Task: Explain the concept and benefits of mindfulness.\nContext:\n● Define mindfulness and its origins in Buddhism and psychology.\n● Cover mindfulness practices like meditation and deep breathing.\n● Explain how mindfulness improves mental well-being.\nConstraints:\n● Word count: ~300 words.\n● Tone: Reflective and educational.\nOutput Format:\n[Mindfulness guide with practical exercises]"
+      },
+      {
+        "prompt": "How can I improve website loading speed?",
+        "response": "Task: Provide strategies to optimize website loading speed.\nContext:\n● Cover techniques like image compression, lazy loading, and minifying CSS/JavaScript.\n● Discuss CDN (Content Delivery Network) and server-side optimizations.\n● Provide real-world examples of speed improvements.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technical but accessible.\nOutput Format:\n[List of optimization strategies with examples]"
+      },
+      {
+        "prompt": "What are some UX best practices for mobile apps?",
+        "response": "Task: Explain UX design best practices for mobile applications.\nContext:\n● Cover essential elements like navigation, accessibility, and responsive design.\n● Include examples from popular mobile apps.\n● Discuss how user psychology impacts UX decisions.\nConstraints:\n● Word count: ~350 words.\n● Tone: Practical and industry-specific.\nOutput Format:\n[UX best practices guide with examples]"
+      },
+      {
+        "prompt": "How does blockchain ensure security?",
+        "response": "Task: Explain how blockchain technology enhances security.\nContext:\n● Cover cryptographic hashing, decentralization, and consensus mechanisms.\n● Explain the role of smart contracts in preventing fraud.\n● Provide a real-world example of blockchain in cybersecurity.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technical yet beginner-friendly.\nOutput Format:\n[Detailed security breakdown with real-world applications]"
+      },
+      {
+        "prompt": "What are the best practices for CI/CD pipelines?",
+        "response": "Task: Explain best practices for setting up CI/CD (Continuous Integration & Deployment) pipelines.\nContext:\n● Cover automation, testing, and rollback strategies.\n● Discuss tools like Jenkins, GitHub Actions, and Kubernetes.\n● Provide a sample CI/CD workflow.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technical and practical.\nOutput Format:\n[Step-by-step guide with example workflows]"
+      },
+      {
+        "prompt": "How can I price my SaaS product?",
+        "response": "Task: Explain SaaS pricing strategies and models.\nContext:\n● Cover subscription-based, freemium, and enterprise pricing models.\n● Include strategies like tiered pricing and value-based pricing.\n● Provide case studies from successful SaaS companies.\nConstraints:\n● Word count: ~400 words.\n● Tone: Business-oriented and analytical.\nOutput Format:\n[Pricing strategy guide with examples]"
+      },
+      {
+        "prompt": "How can I rank higher on Google?",
+        "response": "Task: Provide actionable SEO strategies to improve Google rankings.\nContext:\n● Cover on-page SEO, backlinks, and content optimization.\n● Discuss Google’s latest algorithm updates and how they impact rankings.\n● Provide a keyword research framework.\nConstraints:\n● Word count: ~400 words.\n● Tone: Tactical and data-driven.\nOutput Format:\n[SEO strategy guide with implementation steps]"
+      },
+      {
+        "prompt": "How do I grow my Instagram organically?",
+        "response": "Task: Provide effective strategies for organic Instagram growth.\nContext:\n● Cover content creation, engagement tactics, and hashtag strategies.\n● Discuss Instagram algorithm updates and their impact.\n● Provide a content calendar template.\nConstraints:\n● Word count: ~350 words.\n● Tone: Practical and engaging.\nOutput Format:\n[Growth strategy with a sample content plan]"
+      },
+      {
+        "prompt": "How do I edit videos like a professional?",
+        "response": "Task: Explain essential video editing techniques for beginners.\nContext:\n● Cover key editing principles like cuts, transitions, and color grading.\n● Discuss tools like Adobe Premiere Pro, DaVinci Resolve, and Final Cut Pro.\n● Provide a beginner-friendly editing workflow.\nConstraints:\n● Word count: ~350 words.\n● Tone: Educational and practical.\nOutput Format:\n[Editing guide with workflow examples]"
+      },
+      {
+        "prompt": "How is AR used in retail?",
+        "response": "Task: Explain how augmented reality is transforming the retail industry.\nContext:\n● Cover AR applications in virtual try-ons, in-store navigation, and personalized shopping.\n● Provide case studies from brands using AR effectively.\n● Discuss the future potential of AR in e-commerce.\nConstraints:\n● Word count: ~400 words.\n● Tone: Industry-focused and forward-thinking.\nOutput Format:\n[AR impact analysis with case studies]"
+      },
+      {
+        "prompt": "How can I become a professional esports player?",
+        "response": "Task: Provide a roadmap for becoming a professional esports player.\nContext:\n● Cover skill improvement, practice routines, and gaming strategy.\n● Discuss esports teams, tournaments, and sponsorship opportunities.\n● Include mental and physical fitness tips for gaming endurance.\nConstraints:\n● Word count: ~350 words.\n● Tone: Motivational and strategic.\nOutput Format:\n[Step-by-step guide to esports success]"
+      },
+      {
+        "prompt": "How do robotic arms work?",
+        "response": "Task: Explain the working principles of robotic arms.\nContext:\n● Cover actuators, sensors, and control systems.\n● Discuss applications in manufacturing, healthcare, and space exploration.\n● Provide a breakdown of a real-world robotic arm design.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technical yet easy to understand.\nOutput Format:\n[Robotics guide with practical examples]"
+      },
+      {
+        "prompt": "What are the best ways to learn a new language?",
+        "response": "Task: Provide effective strategies for learning a new language.\nContext:\n● Cover immersion techniques, flashcards, and spaced repetition.\n● Discuss language learning apps like Duolingo, Anki, and Babbel.\n● Provide a sample 30-day language learning plan.\nConstraints:\n● Word count: ~350 words.\n● Tone: Motivational and structured.\nOutput Format:\n[Language learning roadmap]"
+      },
+      {
+        "prompt": "What are the key aspects of GDPR compliance?",
+        "response": "Task: Explain the key principles and requirements of GDPR compliance.\nContext:\n● Cover data protection, user consent, and the right to be forgotten.\n● Discuss how businesses can ensure compliance.\n● Provide real-world examples of GDPR violations and consequences.\nConstraints:\n● Word count: ~400 words.\n● Tone: Legal yet easy to understand.\nOutput Format:\n[GDPR compliance breakdown]"
+      },
+      {
+        "prompt": "How do I start investing with little money?",
+        "response": "Task: Provide beginner-friendly investment strategies for individuals with limited capital.\nContext:\n● Cover fractional shares, ETFs, and robo-advisors.\n● Explain risk management and compounding interest.\n● Provide examples of real investment growth scenarios.\nConstraints:\n● Word count: ~400 words.\n● Tone: Educational and accessible.\nOutput Format:\n[Step-by-step investment guide]"
+      },
+      {
+        "prompt": "How do I validate a business idea?",
+        "response": "Task: Explain the process of validating a business idea before launching.\nContext:\n● Cover market research, competitor analysis, and customer feedback.\n● Discuss MVP (Minimum Viable Product) testing.\n● Provide case studies of successful idea validation.\nConstraints:\n● Word count: ~400 words.\n● Tone: Strategic and insightful.\nOutput Format:\n[Business validation framework]"
+      },
+      {
+        "prompt": "How can I write high-converting sales copy?",
+        "response": "Task: Provide best practices for writing persuasive sales copy.\nContext:\n● Cover psychological triggers, storytelling, and call-to-action techniques.\n● Discuss AIDA (Attention, Interest, Desire, Action) framework.\n● Provide real-world examples of successful sales copy.\nConstraints:\n● Word count: ~400 words.\n● Tone: Persuasive and results-oriented.\nOutput Format:\n[Sales copywriting guide with examples]"
+      },
+      {
+        "prompt": "What are the key responsibilities of a product manager?",
+        "response": "Task: Explain the core responsibilities of a product manager.\nContext:\n● Cover product lifecycle management, stakeholder communication, and roadmaps.\n● Discuss key PM frameworks like Agile and Lean.\n● Provide insights from experienced product managers.\nConstraints:\n● Word count: ~400 words.\n● Tone: Professional and informative.\nOutput Format:\n[Product management overview with frameworks]"
+      },
+      {
+        "prompt": "How can companies optimize supply chain management?",
+        "response": "Task: Provide strategies for optimizing supply chain efficiency.\nContext:\n● Cover demand forecasting, inventory management, and logistics automation.\n● Discuss case studies of companies with efficient supply chains.\n● Provide insights into the role of AI in supply chain management.\nConstraints:\n● Word count: ~400 words.\n● Tone: Analytical and data-driven.\nOutput Format:\n[Supply chain optimization guide]"
+      },
+      {
+        "prompt": "What are the best practices for training machine learning models?",
+        "response": "Task: Explain best practices for training high-performing machine learning models.\nContext:\n● Cover data preprocessing, hyperparameter tuning, and overfitting prevention.\n● Discuss real-world applications in AI research and industry.\n● Provide case studies with practical implementation steps.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technical yet beginner-friendly.\nOutput Format:\n[ML training guide with case studies]"
+      },
+      {
+        "prompt": "How can businesses protect themselves from ransomware attacks?",
+        "response": "Task: Provide a cybersecurity strategy for preventing ransomware attacks.\nContext:\n● Cover endpoint security, regular backups, and employee training.\n● Discuss case studies of recent ransomware incidents.\n● Provide a step-by-step incident response plan.\nConstraints:\n● Word count: ~400 words.\n● Tone: Security-focused and proactive.\nOutput Format:\n[Cybersecurity strategy guide]"
+      },
+      {
+        "prompt": "What are the ethical concerns surrounding AI?",
+        "response": "Task: Discuss key ethical concerns related to artificial intelligence.\nContext:\n● Cover bias in AI models, data privacy, and job displacement.\n● Discuss real-world examples of AI-related ethical dilemmas.\n● Provide recommendations for responsible AI development.\nConstraints:\n● Word count: ~400 words.\n● Tone: Analytical and socially responsible.\nOutput Format:\n[Ethical AI analysis with case studies]"
+      },
+      {
+        "prompt": "How does cognitive bias affect decision-making?",
+        "response": "Task: Explain how cognitive biases influence human decision-making.\nContext:\n● Cover common biases like confirmation bias and anchoring effect.\n● Discuss how these biases impact financial and business decisions.\n● Provide techniques to reduce cognitive bias.\nConstraints:\n● Word count: ~400 words.\n● Tone: Scientific yet practical.\nOutput Format:\n[Behavioral psychology insights with examples]"
+      },
+      {
+        "prompt": "How can I build muscle effectively?",
+        "response": "Task: Provide a science-backed guide to building muscle.\nContext:\n● Cover workout principles like progressive overload and recovery.\n● Discuss the role of protein intake and macronutrient balance.\n● Provide a sample weekly workout plan.\nConstraints:\n● Word count: ~400 words.\n● Tone: Practical and evidence-based.\nOutput Format:\n[Muscle-building guide with sample plan]"
+      },
+      {
+        "prompt": "How can I improve my child's emotional intelligence?",
+        "response": "Task: Provide strategies for fostering emotional intelligence in children.\nContext:\n● Cover empathy-building exercises and self-awareness techniques.\n● Discuss the role of storytelling and social interactions.\n● Provide real-life parenting examples.\nConstraints:\n● Word count: ~400 words.\n● Tone: Supportive and research-backed.\nOutput Format:\n[Emotional intelligence development guide]"
+      },
+      {
+        "prompt": "What are some underrated travel destinations?",
+        "response": "Task: Provide a list of hidden-gem travel destinations worldwide.\nContext:\n● Cover destinations with cultural significance and natural beauty.\n● Discuss local cuisine and unique attractions.\n● Provide travel tips for visiting these locations.\nConstraints:\n● Word count: ~400 words.\n● Tone: Engaging and adventurous.\nOutput Format:\n[Travel guide with destination highlights]"
+      },
+      {
+        "prompt": "How can mindfulness help with anxiety?",
+        "response": "Task: Explain how mindfulness practices can reduce anxiety.\nContext:\n● Cover meditation, breathing exercises, and journaling techniques.\n● Discuss scientific studies supporting mindfulness benefits.\n● Provide a 7-day mindfulness routine.\nConstraints:\n● Word count: ~400 words.\n● Tone: Calming and scientifically grounded.\nOutput Format:\n[Mindfulness techniques guide]"
+      },
+      {
+        "prompt": "How can I become a better leader?",
+        "response": "Task: Provide leadership development strategies.\nContext:\n● Cover emotional intelligence, communication, and decision-making skills.\n● Discuss leadership styles and their effectiveness.\n● Provide a real-world example of great leadership.\nConstraints:\n● Word count: ~400 words.\n● Tone: Motivational and strategic.\nOutput Format:\n[Leadership skills framework]"
+      },
+      {
+        "prompt": "How is AI transforming cancer diagnosis?",
+        "response": "Task: Explain how AI is improving cancer diagnosis and detection.\nContext:\n● Cover machine learning models used in medical imaging.\n● Discuss AI-powered early detection and personalized treatment plans.\n● Provide real-world case studies of AI in oncology.\nConstraints:\n● Word count: ~400 words.\n● Tone: Scientific and informative.\nOutput Format:\n[AI in Cancer Diagnosis Report]"
+      },
+      {
+        "prompt": "How does blockchain technology improve security?",
+        "response": "Task: Explain the security advantages of blockchain technology.\nContext:\n● Cover decentralized networks, cryptographic encryption, and immutability.\n● Discuss real-world use cases like digital identity protection and fraud prevention.\n● Provide insights into the limitations of blockchain security.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technical yet accessible.\nOutput Format:\n[Blockchain Security Analysis]"
+      },
+      {
+        "prompt": "What are the key GDPR compliance requirements?",
+        "response": "Task: Provide a detailed breakdown of GDPR compliance requirements for businesses.\nContext:\n● Cover data processing principles, user consent, and the right to be forgotten.\n● Discuss penalties for non-compliance with case examples.\n● Provide a checklist for companies ensuring GDPR compliance.\nConstraints:\n● Word count: ~400 words.\n● Tone: Legal-focused and professional.\nOutput Format:\n[GDPR Compliance Guide]"
+      },
+      {
+        "prompt": "How does NASA use AI in space missions?",
+        "response": "Task: Explain NASA’s use of artificial intelligence in space exploration.\nContext:\n● Cover AI in Mars rovers, satellite image processing, and deep space navigation.\n● Discuss autonomous spacecraft decision-making.\n● Provide recent AI-driven advancements in space research.\nConstraints:\n● Word count: ~400 words.\n● Tone: Scientific and futuristic.\nOutput Format:\n[NASA & AI Exploration Report]"
+      },
+      {
+        "prompt": "How can I improve my website’s SEO ranking?",
+        "response": "Task: Provide an advanced SEO strategy for improving website ranking.\nContext:\n● Cover on-page SEO, backlinks, technical SEO, and content marketing.\n● Discuss Google algorithm updates and ranking factors.\n● Provide a step-by-step SEO implementation plan.\nConstraints:\n● Word count: ~400 words.\n● Tone: Data-driven and strategic.\nOutput Format:\n[SEO Strategy Guide]"
+      },
+      {
+        "prompt": "How do self-driving cars use AI?",
+        "response": "Task: Explain the role of AI in autonomous vehicles.\nContext:\n● Cover sensor fusion, computer vision, and deep learning models.\n● Discuss real-world applications by Tesla, Waymo, and other companies.\n● Provide ethical concerns and regulatory challenges.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technical and analytical.\nOutput Format:\n[Self-Driving Car AI Report]"
+      },
+      {
+        "prompt": "How can AI help fight climate change?",
+        "response": "Task: Discuss the applications of AI in combating climate change.\nContext:\n● Cover AI in weather prediction, carbon footprint reduction, and energy efficiency.\n● Discuss AI-driven climate models and real-time data analysis.\n● Provide case studies of AI initiatives for sustainability.\nConstraints:\n● Word count: ~400 words.\n● Tone: Scientific and solution-oriented.\nOutput Format:\n[AI & Climate Change Report]"
+      },
+      {
+        "prompt": "What is the philosophy of consciousness?",
+        "response": "Task: Explore philosophical perspectives on consciousness.\nContext:\n● Cover materialism, dualism, and panpsychism.\n● Discuss arguments from Descartes, Chalmers, and Dennett.\n● Provide insights into AI consciousness theories.\nConstraints:\n● Word count: ~400 words.\n● Tone: Philosophical and thought-provoking.\nOutput Format:\n[Consciousness Philosophy Analysis]"
+      },
+      {
+        "prompt": "How do I overcome procrastination?",
+        "response": "Task: Provide actionable strategies for overcoming procrastination.\nContext:\n● Cover habit formation, time management techniques, and mindset shifts.\n● Discuss the role of dopamine and cognitive behavioral therapy (CBT).\n● Provide a 7-day anti-procrastination challenge.\nConstraints:\n● Word count: ~400 words.\n● Tone: Motivational and practical.\nOutput Format:\n[Procrastination Breakthrough Guide]"
+      },
+      {
+        "prompt": "How do elite athletes train their mental resilience?",
+        "response": "Task: Explain how top athletes develop mental resilience.\nContext:\n● Cover visualization techniques, mindfulness, and sports psychology.\n● Discuss case studies of Olympic champions and their mindset training.\n● Provide practical exercises for improving mental toughness.\nConstraints:\n● Word count: ~400 words.\n● Tone: Motivational and evidence-based.\nOutput Format:\n[Athletic Mindset Guide]"
+      },
+      {
+        "prompt": "How are robots transforming the manufacturing industry?",
+        "response": "Task: Discuss the role of robotics in modern manufacturing.\nContext:\n● Cover robotic process automation (RPA), AI-powered robots, and Industry 4.0.\n● Discuss how automation is improving efficiency and reducing costs.\n● Provide examples from automotive, electronics, and food industries.\nConstraints:\n● Word count: ~400 words.\n● Tone: Technological and insightful.\nOutput Format:\n[Manufacturing Robotics Report]"
+      },
+      {
+        "prompt": "How did the Roman Empire manage its vast territories?",
+        "response": "Task: Analyze the governance and administration of the Roman Empire.\nContext:\n● Cover the role of provinces, governors, and Roman law.\n● Discuss the use of military and infrastructure for control.\n● Provide historical accounts of Rome’s strategies for governance.\nConstraints:\n● Word count: ~400 words.\n● Tone: Historical and analytical.\nOutput Format:\n[Roman Empire Governance Report]"
+      },
+      {
+        "prompt": "What are the biggest fashion trends of 2025?",
+        "response": "Task: Predict upcoming fashion trends for 2025.\nContext:\n● Cover streetwear, sustainable fashion, and tech-integrated clothing.\n● Discuss insights from major fashion shows and influencers.\n● Provide a trend forecast based on consumer behavior.\nConstraints:\n● Word count: ~400 words.\n● Tone: Trendy and forward-thinking.\nOutput Format:\n[2025 Fashion Trend Report]"
+      },
+      {
+        "prompt": "What are some budget-friendly home renovation ideas?",
+        "response": "Task: Provide budget-friendly home renovation ideas.\nContext:\n● Cover DIY projects, space optimization, and affordable decor.\n● Discuss cost-effective materials and smart home integrations.\n● Provide real-life before-and-after examples.\nConstraints:\n● Word count: ~400 words.\n● Tone: Practical and creative.\nOutput Format:\n[Home Renovation Guide]"
+      }
+    ]
+  }
