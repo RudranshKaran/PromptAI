@@ -1,4 +1,4 @@
-# AI Prompt Enhancer
+# PromptAI
 
 A web application that enhances prompts using the Mistral AI API.
 
